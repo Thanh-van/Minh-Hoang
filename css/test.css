@@ -1,0 +1,181 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin:0 2%;
+}
+table {
+  border: 1px #a39485 solid;
+  font-size: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th {
+  text-align: left;
+}
+  
+thead {
+  font-weight: bold;
+  color: black;
+  background: #cccccc;
+}
+  
+ td, th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+  
+ td {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  background: #fff;
+}
+
+a {
+  color: #73685d;
+}
+ .btn-button svg{
+  width: 1rem;
+ }
+ .seach-box{
+  margin: 2% 0;
+ }
+ a{
+  text-decoration: none;
+ }
+ .seach-box input{
+  padding: 0.5rem;
+  max-width: 100%;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  border: 1px solid #cccccc;
+ }
+ .btn-add,.btn-edit{
+  position: fixed;
+  right: 2%;
+  bottom: 2%; 
+ }
+ .btn-add svg,.btn-edit svg{
+  width: 2.5rem;
+ }
+ .popup-back,.popup-back-edit{
+  position: fixed;
+  background: black;
+  top: 0;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  visibility: hidden;
+  transition: all .5s;
+ }
+ .popup-form-add,.popup-form-edit{
+  position: fixed;
+  background: #34495e;
+  top: 15%;
+  bottom: 35%;
+  left: 30%;
+  right: 30%;
+  border-radius: 1rem;
+  padding: 2%;
+  transform: translateY(-120%);  
+  transition: all 1s;
+  opacity: 0;
+  display: block;
+ }
+ .popup_input:checked ~ .popup-back{
+  opacity: 30%;
+  visibility: visible;
+ }
+ .popup_input_edit:checked ~ .popup-back-edit{
+  opacity: 30%;
+  visibility: visible;
+ }
+ .popup_icon_close svg{
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  width: 1.5rem;
+ }
+ .popup_input:checked ~ .popup-form-add{
+    transform: translateY(0);
+    opacity: 1;
+ }
+ .popup_input_edit:checked ~ .popup-form-edit{
+    transform: translateY(0);
+    opacity: 1;
+ }
+ .tracking_input_group{
+    display: block;
+    float: left;
+    width: 100%;
+ }
+ .popup-form-add input,select,.popup-form-edit input,select{
+  padding: 0.5em 0.6em;
+  padding-right: 2px;
+  font-size: 18px;
+  width: 45%;
+  margin: 0.5em 0; 
+ }
+ .popup-form-add input[type='submit'],.popup-form-edit input[type='submit']{
+  padding: 10px 15px;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+  background: #27ae60;
+  margin-left: 30%;
+  border:none;
+  font-size: 20px;
+
+  border-radius: 0.3rem;
+ }
+ @media all and (max-width: 768px) {
+    
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    text-align: right;
+  }
+  
+  table {
+    position: relative; 
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+  
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+  .btn-button svg{
+    display: block;
+  }
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+  
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  
+  }
